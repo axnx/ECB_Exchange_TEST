@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.ecb.int/vocabulary/2002-08-01/eurofxref" xmlns:eurofxref="http://www.ecb.int/vocabulary/2002-08-01/eurofxref" xmlns:gesmes="http://www.gesmes.org/xml/2002-08-01">
+  <xs:import namespace="http://www.gesmes.org/xml/2002-08-01" schemaLocation="gesmes.xsd"/>
+  <xs:element name="Cube">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="eurofxref:Cube"/>
+      </xs:sequence>
+      <xs:attribute name="currency" type="xs:NCName"/>
+      <xs:attribute name="rate" type="xs:decimal"/>
+      <xs:attribute name="time" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
